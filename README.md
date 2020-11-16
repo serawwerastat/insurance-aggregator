@@ -12,17 +12,17 @@ User inputs data and gets offers from multiple insurance companies.
 
 
 Implement java based application where:
-* Main page where user enters input data
-* Result page where recieved insurance offers are displayed
- * Chepest price is shown on top
-* Integrate 2 insurer rest services 
- * Insurer 1 - rest swagger definition: http://localhost:8181/rest/api-doc
- * Insurer 2 - rest swagger definition: http://localhost:8282/rest/api-doc
-* Implement simple Admin UI where admin user can configure rest service endpoints 
+- Main page where user enters input data
+- Result page where recieved insurance offers are displayed
+  - Chepest price is shown on top
+- Integrate 2 insurer rest services 
+  - Insurer 1 - rest swagger definition: http://localhost:8181/rest/api-doc
+  - Insurer 2 - rest swagger definition: http://localhost:8282/rest/api-doc
+- Implement simple Admin UI where admin user can configure rest service endpoints 
 
 There are no strict requirements on UI, you may include minimum amount of data/fields to be requested from end-users. 
 
-To run local services use Docker compose docker-compose up --build -d
+To run local services use Docker compose `docker-compose up --build -d`
 You can browse api spec on Swagger UI http://localhost:8082/
 
 ## Deliverables
