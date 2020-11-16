@@ -22,6 +22,8 @@ Implement java based application where:
 
 There are no strict requirements on UI, you may include minimum amount of data/fields to be requested from end-users. 
 
+Solution should follow industry best pratices. Appropriate exception handling, validations and unit tests must be implemented.
+
 To run local services use Docker compose `docker-compose up --build -d`
 You can browse api spec on Swagger UI http://localhost:8082/
 
