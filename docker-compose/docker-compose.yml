@@ -1,0 +1,35 @@
+version: '2'
+services:
+    insurer-rest-1:
+        container_name: insurer-rest-1
+        build: insurer
+        restart: unless-stopped
+        environment:
+            APP_ARGUMENTS: >
+                -Dserver.port=8080
+            MAIN_CLASS: lv.galeo.test.insurer.app.InsurerApplication
+            REST_HOST: localhost
+            REST_PORT: 8181
+            REST_SCHEMAS: http
+        ports:
+            - "8181:8080"
+    insurer-rest-2:
+        container_name: insurer-rest-2
+        build: insurer
+        restart: unless-stopped
+        environment:
+            APP_ARGUMENTS: >
+                -Dserver.port=8080
+            MAIN_CLASS: lv.galeo.test.insurer2.app.InsurerApplication
+            REST_HOST: localhost
+            REST_PORT: 8282
+            REST_SCHEMAS: http
+        ports:
+            - "8282:8080"
+    swagger-ui:
+        image: swaggerapi/swagger-ui
+        container_name: swagger-ui
+        ports:
+          - "8082:8080"
+        environment:
+          URLS: "[{ url: \"http://localhost:8181/rest/api-doc\", name: \"Insurer 1\" }, { url: \"http://localhost:8282/rest/api-doc\", name: \"Insurer 2\" },]"
