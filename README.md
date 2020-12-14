@@ -32,3 +32,29 @@ You can browse api spec on Swagger UI http://localhost:8082/
 1.  __Arhitecture and design__ Please describe / draw main components of web application, how would you build the system. Please describe a reason of choosing an architecture, technologies, frameworks, etc. You may draw by hand and take a photo, e.g. its not required to use tools for UML, dataflow, MS Office, etc.
 2.  __Source code__  commited to this repository.
 3.  __Build & Run Script__ Single script to build and run the solution.
+
+
+## Realisation
+
+- User UI - http://localhost:3111
+- Admin UI - http://localhost:3222
+- Aggregator API - http://localhost:8085
+- Insurer One - http://localhost:8181
+- Insurer Two - http://localhost:8181
+
+1. User UI - gathers user personal data and pass in to Aggregator. 
+   The get response as sorted list of premium responses and show the to user.
+2. Admin UI - manage Insurers that are used by Aggregator.
+3. Aggregator API:
+   1. Gather premiums from all active insurers async
+   2. Provide CRUD functionality form Insurer management
+    
+To add new connection type of insurer you just need to create new package 
+in `aggregatorapi.service.insurer.insurareType`. Inside create new class 
+that implements `Insurance` and implement `getPremium` method. 
+Also add new type to `aggregatorapi.domain.enums.InsurerConnectionType`
+
+In admin UI you will need to update `admin-ui/src/insurerType.js` with new connection type.
+Plus add it to `<select>` in both `admin-ui/src/components/InsurerFullInfo.js` 
+and `admin-ui/src/components/AddInsurerMenu.js`. 
+In future this can be improved by creating new endpoint in Aggregator API to get all connection types

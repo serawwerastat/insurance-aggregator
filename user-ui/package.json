@@ -1,0 +1,57 @@
+{
+  "name": "user-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.12.10",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "babel-jest": "^26.6.3",
+    "bootstrap": "^4.5.3",
+    "ciqu-react-calendar": "^1.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.1",
+    "mobx": "^6.0.4",
+    "moment": "^2.29.1",
+    "ramda": "^0.27.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "react-test-renderer": "^17.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
+    "chai": "^4.2.0",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "jest": "^26.6.3"
+  }
+}
