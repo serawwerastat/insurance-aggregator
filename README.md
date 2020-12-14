@@ -40,7 +40,7 @@ You can browse api spec on Swagger UI http://localhost:8082/
 - Admin UI - http://localhost:3222
 - Aggregator API - http://localhost:8085
 - Insurer One - http://localhost:8181
-- Insurer Two - http://localhost:8181
+- Insurer Two - http://localhost:8282
 
 1. User UI - gathers user personal data and pass in to Aggregator. 
    The get response as sorted list of premium responses and show the to user.
